@@ -86,4 +86,13 @@ interface IPaySystemDriverService {
 	 *          false   -   РРН требуется
 	 */
     boolean isNotNeedRRN(int instanceId);
+
+    /**
+     * Драйвер терминала возвращает Action необходимого UI.
+     * Если используется стандартный UI, возвращать null.
+     *
+     * @param instanceId - номер экземпляра драйвера
+     * @return Action, который будет вызван вместо стандартного UI оплаты банковской картой
+     */
+    String getUIAction(int instanceId);
 }
